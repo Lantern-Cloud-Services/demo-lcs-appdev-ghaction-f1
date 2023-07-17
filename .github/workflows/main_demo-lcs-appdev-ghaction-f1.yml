@@ -23,7 +23,7 @@ jobs:
         run: echo 'This job runs only if TEST is true'
   
   build-and-deploy:
-    if: ${{ github.env.TEST }} != 'true'
+    if: ${{ github.env.TEST }} == 'false'
     runs-on: windows-latest
     steps:
       - name: 'Checkout GitHub Action'
