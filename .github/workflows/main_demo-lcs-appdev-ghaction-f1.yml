@@ -16,14 +16,14 @@ env:
 
 jobs:
   demo-test:
-    if: ${{ vars.TEST == 'true' }}
+    if: ${{ github.env.TEST == 'true' }}
     runs-on: windows-latest
     steps:
       - name: 'Run a script'
         run: echo 'This job runs only if TEST is true'
   
   build-and-deploy:
-    if: ${{ vars.TEST != 'true' }}
+    if: ${{ github.env.TEST != 'true' }}
     runs-on: windows-latest
     steps:
       - name: 'Checkout GitHub Action'
