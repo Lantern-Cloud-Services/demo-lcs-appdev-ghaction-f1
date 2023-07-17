@@ -20,8 +20,8 @@ jobs:
     #if: github.repository == 'octo-org/octo-repo-prod'
     runs-on: windows-latest
     steps:
-      - name: run a script
-        run: echo hello world!
+      - name: 'Run a script'
+        run: echo 'This job runs only if TEST is true'
   
   build-and-deploy:
     if: github.repository == 'octo-org/octo-repo-prod'
