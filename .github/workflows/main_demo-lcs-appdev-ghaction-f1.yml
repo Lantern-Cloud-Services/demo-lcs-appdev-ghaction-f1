@@ -14,14 +14,7 @@ env:
   DOTNET_VERSION: '6.0.x' # set this to the dotnet version to use
   TEST: 'true'
 
-jobs:
-  demo-test:
-    if: vars.TEST == 'true'
-    runs-on: windows-latest
-    steps:
-      - name: 'Run a script'
-        run: echo 'This job runs only if TEST is true'
-  
+jobs:  
   build-and-deploy:    
     runs-on: windows-latest
     steps:
