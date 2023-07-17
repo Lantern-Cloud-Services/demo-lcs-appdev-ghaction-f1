@@ -20,7 +20,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: run a script
-      - run: echo hello workld!
+        run: echo hello world!
   
   build-and-deploy:
     if: github.repository == 'octo-org/octo-repo-prod'
