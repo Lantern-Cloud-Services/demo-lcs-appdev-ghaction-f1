@@ -16,7 +16,7 @@ env:
 
 jobs:
   demo-test:
-    if: github.env.TEST == 'true'
+    if: ${{ github.env.TEST }} == 'true'
     #if: github.repository == 'octo-org/octo-repo-prod'
     runs-on: windows-latest
     steps:
