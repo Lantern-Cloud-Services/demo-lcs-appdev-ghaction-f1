@@ -16,14 +16,14 @@ env:
 
 jobs:
   demo-test:
-    if:env.TEST=='true'
+    if:${{ env.TEST }} == 'true'
     runs-on: windows-latest
     steps:
       - name: run a script
       - run: echo hello workld!
   
   build-and-deploy:
-    if:env.TEST!='true'
+    if:${{ env.TEST }} != 'true'
     runs-on: windows-latest
     steps:
       - name: 'Checkout GitHub Action'
