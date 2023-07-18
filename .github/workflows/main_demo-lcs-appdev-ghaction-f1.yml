@@ -16,7 +16,7 @@ env:
 
 jobs:  
   call-workflow-in-local-repo:
-    uses: Lantern-Cloud-Services/demo-lcs-appdev-ghaction-f1/.github/workflows/workflow-reusable.yml@v1
+    uses: ./.github/workflows/workflow-reusable.yml
 
   build-and-deploy:    
     #environment:
