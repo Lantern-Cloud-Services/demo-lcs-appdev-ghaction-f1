@@ -26,7 +26,7 @@ jobs:
         run: echo 'This job runs only if TEST is true'
       
       - name: 'call-workflow-2-in-local-repo'
-        uses: ./.github/workflows/workflow-reusable.yml
+        uses: Lantern-Cloud-Services/demo-lcs-appdev-ghaction-f1/.github/workflows/workflow-reusable.yml@main
       
       - name: 'Checkout GitHub Action'
         if: ${{ env.TEST != 'true' }}
