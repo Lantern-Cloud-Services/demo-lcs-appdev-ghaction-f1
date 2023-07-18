@@ -2,6 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
 
+
 # GitHub Copilot: This is a GitHub Actions workflow file written in YAML format. The purpose of this file is to build and deploy a .NET Core 
 # application to an Azure Function App. The workflow is triggered by a manual trigger using the `workflow_dispatch` event. 
 
