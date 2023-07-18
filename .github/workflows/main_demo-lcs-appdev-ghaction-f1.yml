@@ -16,8 +16,8 @@ env:
 
 jobs:  
   build-and-deploy:    
-    environment:
-      name: Pass Review
+    #environment:
+    #  name: Pass Review
     
     runs-on: windows-latest
     steps:
@@ -25,6 +25,8 @@ jobs:
         if: ${{ env.TEST == 'true' }}
         run: echo 'This job runs only if TEST is true'
       
+      - name: 'call-workflow-2-in-local-repo'
+        uses: ./.github/workflows/workkflow-reusable.yml
       
       - name: 'Checkout GitHub Action'
         if: ${{ env.TEST != 'true' }}
