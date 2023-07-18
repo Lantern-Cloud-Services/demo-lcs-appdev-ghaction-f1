@@ -15,6 +15,9 @@ env:
   TEST: 'true'
 
 jobs:  
+  call-workflow-in-local-repo:
+    uses: Lantern-Cloud-Services/demo-lcs-appdev-ghaction-f1/.github/workflows/workflow-reusable.yml@v1
+
   build-and-deploy:    
     #environment:
     #  name: Pass Review
@@ -24,11 +27,7 @@ jobs:
       - name: 'Run a script'
         if: ${{ env.TEST == 'true' }}
         run: echo 'This job runs only if TEST is true'
-      
-      - name: 'call-workflow-in-local-repo'
-        if: ${{ env.TEST == 'true' }}
-        uses: Lantern-Cloud-Services/demo-lcs-appdev-ghaction-f1/.github/workflows/workflow-reusable.yml@v1
-      
+            
       - name: 'Checkout GitHub Action'
         if: ${{ env.TEST != 'true' }}
         uses: actions/checkout@v2
